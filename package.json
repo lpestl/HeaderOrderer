@@ -1,7 +1,7 @@
 {
   "name": "header-orderer",
   "displayName": "HeaderOrderer",
-  "description": "An extension for Visual Studio Code that allows you to monitor the order of functions in both the header file and the .cpp file when developing in C++.",
+  "description": "Sync order of C/C++ function implementations in .cpp with their prototypes order in .h files",
   "version": "0.0.1",
   "engines": {
     "vscode": "^1.106.1"
@@ -9,7 +9,11 @@
   "categories": [
     "Other"
   ],
-  "activationEvents": [],
+  "activationEvents": [
+    "onCommand:header-orderer.scanHeader",
+    "onCommand:header-orderer.findImpls",
+    "onCommand:header-orderer.syncOrder"
+  ],
   "main": "./out/extension.js",
   "contributes": {
     "commands": [
